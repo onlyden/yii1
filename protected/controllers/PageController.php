@@ -122,7 +122,14 @@ class PageController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Page');
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'id>0';
+//		$criteria->order = 'title ASC';
+
+		$dataProvider=new CActiveDataProvider('Page',[
+			'criteria'=>$criteria,
+			'pagination'=>['pageSize' => 5]
+		]);
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
