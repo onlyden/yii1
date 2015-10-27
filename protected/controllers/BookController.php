@@ -1,6 +1,7 @@
 <?php
 class BookController extends Controller{
-    public function actionIndex(){
-        echo 111;
+    public function actionIndex($id = 1){
+        $model = Book::model()->findByPk($id);
+   $this->render('index', ['model'=>$model]);
     }
 }

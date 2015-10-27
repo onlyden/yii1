@@ -156,3 +156,68 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/index.php?r=my/one
 ---
+2015/10/27 19:03:35 [error] [php] Invalid argument supplied for foreach() (C:\OpenServer\domains\yii\www\protected\controllers\BookController.php:7)
+Stack trace:
+#0 C:\OpenServer\domains\yii\www\framework\web\CController.php(286): BookController->runAction()
+#1 C:\OpenServer\domains\yii\www\framework\web\CController.php(265): BookController->runActionWithFilters()
+#2 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(282): BookController->run()
+#3 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\OpenServer\domains\yii\www\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\OpenServer\domains\yii\www\index.php(12): CWebApplication->run()
+REQUEST_URI=/index.php?r=book/index
+in C:\OpenServer\domains\yii\www\protected\controllers\BookController.php (7)
+in C:\OpenServer\domains\yii\www\index.php (12)
+2015/10/27 19:36:49 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CDbCriteria.:id".' in C:\OpenServer\domains\yii\www\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\www\framework\db\schema\CDbCriteria.php(160): CComponent->__set(':id', NULL)
+#1 C:\OpenServer\domains\yii\www\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\OpenServer\domains\yii\www\framework\db\schema\CDbCommandBuilder.php(617): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\OpenServer\domains\yii\www\framework\db\ar\CActiveRecord.php(1490): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), ':id', Array, Array, '`t`.')
+#4 C:\OpenServer\domains\yii\www\protected\controllers\BookController.php(5): CActiveRecord->findByPk(':id', Array)
+#5 C:\OpenServer\domains\yii\www\framework\web\actions\CInlineAction.php(49): BookController->actionIndex()
+#6 C:\OpenServer\domains\yii\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\OpenServer\domains\yii\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\OpenServer\domains\yii\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(282): CController->run('index')
+#10 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#11 C:\OpenServer\domains\yii\www\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\OpenServer\domains\yii\www\index.php(12): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=book/index
+---
+2015/10/27 19:37:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\OpenServer\domains\yii\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\OpenServer\domains\yii\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\OpenServer\domains\yii\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\OpenServer\domains\yii\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(282): CController->run('index')
+#4 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#5 C:\OpenServer\domains\yii\www\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\OpenServer\domains\yii\www\index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=book/index
+---
+2015/10/27 19:38:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\OpenServer\domains\yii\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\OpenServer\domains\yii\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\OpenServer\domains\yii\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\OpenServer\domains\yii\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(282): CController->run('index')
+#4 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(141): CWebApplication->runController('book/index')
+#5 C:\OpenServer\domains\yii\www\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\OpenServer\domains\yii\www\index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=book/index
+---
+2015/10/27 19:38:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in C:\OpenServer\domains\yii\www\framework\web\CController.php:336
+Stack trace:
+#0 C:\OpenServer\domains\yii\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\OpenServer\domains\yii\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\OpenServer\domains\yii\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(282): CController->run('')
+#4 C:\OpenServer\domains\yii\www\framework\web\CWebApplication.php(141): CWebApplication->runController('book')
+#5 C:\OpenServer\domains\yii\www\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\OpenServer\domains\yii\www\index.php(12): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=book
+---
