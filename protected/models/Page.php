@@ -43,6 +43,7 @@ class Page extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'category'=>[self::BELONGS_TO, 'Category', 'category_id'],
 		);
 	}
 
@@ -55,6 +56,7 @@ class Page extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'title',
 			'text' => 'text',
+            'category'=>'Категория',
 		);
 	}
 
@@ -79,9 +81,11 @@ class Page extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('text',$this->text,true);
+//		$criteria->condition = 'id >2';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+            'pagination'=> ['pageSize'=>3],
 		));
 	}
 
